@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+  <title>91今日大乱斗-大乱斗每日阵容_91今日大乱斗英雄推荐</title>
+  <meta name="description" content="91今日大乱斗每日阵容速递，整理当日英雄强度、符文出装与乱斗节奏技巧，覆盖91今日大乱斗热门对局、版本答案和社区讨论，帮玩家快速掌握今日大乱斗的选人与打法。">
+  <meta name="keywords" content="91今日大乱斗,大乱斗每日阵容,91乱斗英雄推荐,大乱斗版本答案,91今日大乱斗攻略">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b2440'/%3E%3Cpath d='M8 20l5-9 4 7 3-5 4 7H8z' fill='%23ffb648'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #1c2333;
+      --ink-soft: #5b6579;
+      --line: #e6e9f0;
+      --paper: #f6f7fb;
+      --card: #ffffff;
+      --accent: #ff7a45;
+      --accent-deep: #e85d2a;
+      --accent-soft: #fff1e8;
+      --blue: #2f6bff;
+      --blue-soft: #eef3ff;
+      --gold: #b7791f;
+      --gold-soft: #fff8e6;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --shadow: 0 8px 24px rgba(28, 35, 51, .06);
+      --shadow-hover: 0 14px 32px rgba(28, 35, 51, .10);
+      --max: 1200px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul, ol { list-style: none; }
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .section { padding: 44px 0; }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 24px;
+      letter-spacing: .5px;
+      position: relative;
+      padding-left: 14px;
+      line-height: 1.3;
+    }
+    .section-head h2::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 5px; bottom: 5px;
+      width: 5px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, var(--accent), #ffb648);
+    }
+    .section-head p { color: var(--ink-soft); font-size: 14px; }
+    .muted { color: var(--ink-soft); }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      line-height: 1.6;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      white-space: nowrap;
+    }
+    .tag.blue { background: var(--blue-soft); color: var(--blue); }
+    .tag.gold { background: var(--gold-soft); color: var(--gold); }
+    .tag.gray { background: #f0f2f7; color: #5b6579; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .2s ease;
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+    .btn.ghost { background: #fff; color: var(--ink); border-color: var(--line); }
+    .btn.orange { background: var(--accent); }
+    .btn.orange:hover { background: var(--accent-deep); }
+
+    /* 顶部导航 */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(230,233,240,.75);
+    }
+    .nav {
+      height: 66px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: .4px;
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #1f2a44, #3a4b73);
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.1);
+    }
+    .logo-mark::before, .logo-mark::after {
+      content: "";
+      position: absolute;
+      border-radius: 3px;
+      background: #ffb648;
+      transform: rotate(45deg);
+    }
+    .logo-mark::before { width: 14px; height: 14px; left: 7px; top: 11px; }
+    .logo-mark::after { width: 8px; height: 8px; right: 7px; top: 8px; background: #ff7a45; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      padding: 8px 11px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #38415a;
+      white-space: nowrap;
+      transition: .2s;
+    }
+    .nav-links a:hover { background: #f1f3f9; color: var(--ink); }
+    .nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+    /* Banner */
+    .hero {
+      position: relative;
+      padding: 54px 0 44px;
+      overflow: hidden;
+      background:
+        radial-gradient(900px 380px at 85% -10%, rgba(255,122,69,.16), transparent 60%),
+        radial-gradient(700px 340px at 8% 110%, rgba(47,107,255,.10), transparent 60%),
+        linear-gradient(180deg, #fff 0%, #f8f9fd 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 34px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #e9ecf4;
+      font-size: 13px;
+      color: #35405a;
+      box-shadow: 0 4px 14px rgba(28,35,51,.05);
+      margin-bottom: 16px;
+    }
+    .pulse {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #ff5a36;
+      box-shadow: 0 0 0 4px rgba(255,90,54,.16);
+    }
+    .hero h1 {
+      font-size: clamp(30px, 4.4vw, 48px);
+      line-height: 1.2;
+      letter-spacing: .4px;
+      margin-bottom: 14px;
+    }
+    .hero h1 span { color: var(--accent-deep); }
+    .hero-desc {
+      color: #4c5670;
+      font-size: 15.5px;
+      max-width: 660px;
+      margin-bottom: 22px;
+    }
+    .hero-search {
+      display: flex;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid #e4e8f2;
+      border-radius: 16px;
+      padding: 8px;
+      box-shadow: 0 12px 30px rgba(28,35,51,.07);
+      max-width: 660px;
+    }
+    .hero-search input {
+      flex: 1;
+      border: 0;
+      outline: none;
+      padding: 9px 14px;
+      font-size: 14px;
+      background: transparent;
+      color: var(--ink);
+    }
+    .hero-search .btn { border-radius: 12px; }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hero-tags a {
+      font-size: 13px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #e7eaf2;
+      color: #3d4863;
+      transition: .2s;
+    }
+    .hero-tags a:hover { border-color: #ffc6ad; background: #fff8f4; color: var(--accent-deep); }
+    .hero-side {
+      display: grid;
+      gap: 12px;
+    }
+    .hero-stat {
+      background: #fff;
+      border: 1px solid #e9ecf4;
+      border-radius: var(--radius-md);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: .25s;
+    }
+    .hero-stat:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+    .stat-num {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 20px;
+      background: linear-gradient(135deg, #fff1e8, #ffe0cf);
+      color: var(--accent-deep);
+      flex-shrink: 0;
+    }
+    .stat-num.blue { background: var(--blue-soft); color: var(--blue); }
+    .stat-num.gold { background: var(--gold-soft); color: var(--gold); }
+    .hero-stat strong { display: block; font-size: 15px; }
+    .hero-stat small { color: var(--ink-soft); font-size: 12.5px; }
+
+    /* 快捷分类 */
+    .quick-cats {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 10px;
+    }
+    .cat-chip {
+      padding: 14px 10px;
+      border-radius: var(--radius-sm);
+      background: #fff;
+      border: 1px solid #e9ecf4;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #35405a;
+      transition: .2s;
+    }
+    .cat-chip:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: #ffd8c7; color: var(--accent-deep); }
+    .cat-chip span { display: block; font-size: 11px; color: var(--ink-soft); font-weight: 400; margin-top: 2px; }
+
+    /* 通用卡片 */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      transition: .25s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+
+    /* 热门推荐卡片 */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .rec-card {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rec-cover {
+      height: 108px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #2a3556, #46577f);
+      position: relative;
+      overflow: hidden;
+    }
+    .rec-cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(320px 120px at 85% 110%, rgba(255,182,72,.35), transparent 60%);
+    }
+    .rec-cover .cover-tag {
+      position: absolute;
+      left: 10px; top: 10px;
+      z-index: 1;
+      background: rgba(255,255,255,.14);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.24);
+      backdrop-filter: blur(6px);
+    }
+    .rec-cover .cover-title {
+      position: absolute;
+      left: 12px; bottom: 10px;
+      z-index: 1;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      text-shadow: 0 2px 8px rgba(0,0,0,.24);
+      max-width: 88%;
+    }
+    .rec-card h3 { font-size: 16px; line-height: 1.45; }
+    .rec-card p { font-size: 13.5px; color: var(--ink-soft); flex: 1; }
+    .rec-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12px; color: #7b849b; }
+    .rec-meta b { color: var(--accent-deep); font-weight: 600; }
+
+    /* 最新更新列表 */
+    .update-list { display: grid; gap: 10px; }
+    .update-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: .2s;
+    }
+    .update-item:hover { border-color: #ffd8c7; background: #fffcf9; }
+    .update-time {
+      font-size: 12px;
+      color: #8a93a8;
+      width: 78px;
+      flex-shrink: 0;
+    }
+    .update-item strong { font-size: 14.5px; flex: 1; }
+    .update-item .tag { flex-shrink: 0; }
+
+    /* 深度解析 */
+    .deep-grid { display: grid; grid-template-columns: 1.55fr .85fr; gap: 22px; align-items: start; }
+    .article {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .article h3 { font-size: 19px; margin: 20px 0 10px; }
+    .article h3:first-child { margin-top: 0; }
+    .article p { color: #434d66; font-size: 14.8px; margin-bottom: 12px; }
+    .article .lead { font-size: 15.5px; color: #2e3850; }
+    .side-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .side-box h3 { font-size: 16px; margin-bottom: 12px; }
+    .side-list { display: grid; gap: 10px; }
+    .side-list a {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13.5px;
+      padding: 9px 0;
+      border-bottom: 1px dashed #eef0f6;
+      color: #35405a;
+    }
+    .side-list a:last-child { border-bottom: 0; }
+    .side-list a:hover { color: var(--accent-deep); }
+    .side-list small { color: #8a93a8; }
+
+    /* FAQ */
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .faq-item h3 {
+      font-size: 15px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .faq-item h3::before {
+      content: "Q";
+      color: var(--accent-deep);
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .faq-item p { font-size: 13.8px; color: #4d5770; padding-left: 18px; }
+
+    /* 评论 */
+    .comment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .comment {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 4px 14px rgba(28,35,51,.04);
+    }
+    .comment-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .avatar {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e8edff, #fde7dc);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #42506e;
+      flex-shrink: 0;
+    }
+    .comment-head strong { font-size: 13px; }
+    .comment-head small { margin-left: auto; color: #9aa2b5; font-size: 11px; }
+    .comment p { font-size: 13px; color: #4b556d; }
+
+    /* 资讯 */
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .news-card { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .news-card h3 { font-size: 15.5px; line-height: 1.5; }
+    .news-card p { font-size: 13.2px; color: var(--ink-soft); flex: 1; }
+    .news-date { font-size: 12px; color: #8a93a8; }
+
+    /* 订阅 / 页脚 */
+    .subscribe {
+      background: linear-gradient(120deg, #1e2740, #2b3a5e);
+      border-radius: var(--radius-lg);
+      padding: 34px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .subscribe h2 { font-size: 22px; margin-bottom: 6px; }
+    .subscribe p { color: #c3cbe0; font-size: 14px; }
+    .sub-form { display: flex; gap: 10px; background: rgba(255,255,255,.08); padding: 7px; border-radius: 14px; border: 1px solid rgba(255,255,255,.12); }
+    .sub-form input {
+      border: 0; background: transparent; outline: none; padding: 8px 14px; color: #fff; width: 220px;
+    }
+    .sub-form input::placeholder { color: #aab5cf; }
+
+    footer {
+      margin-top: 44px;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      padding: 34px 0 26px;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px; }
+    .footer-grid h4 { font-size: 14px; margin-bottom: 10px; }
+    .footer-grid a { display: block; font-size: 13px; color: #69738a; padding: 3px 0; }
+    .footer-grid a:hover { color: var(--accent-deep); }
+    .footer-desc { font-size: 13px; color: #69738a; max-width: 320px; }
+    .copyright {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid #eef0f6;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: #8a93a8;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1000px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-side { grid-template-columns: 1fr 1fr; }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .comment-grid { grid-template-columns: repeat(2, 1fr); }
+      .news-grid { grid-template-columns: repeat(2, 1fr); }
+      .quick-cats { grid-template-columns: repeat(4, 1fr); }
+      .deep-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .nav { height: auto; padding: 12px 0; flex-wrap: wrap; }
+      .nav-links { order: 3; width: 100%; flex-basis: 100%; padding-bottom: 2px; }
+      .nav-actions .btn.ghost { display: none; }
+      .hero { padding: 34px 0 30px; }
+      .hero-search { flex-direction: column; }
+      .hero-search .btn { width: 100%; }
+      .hero-side { grid-template-columns: 1fr; }
+      .grid-3, .comment-grid, .news-grid, .faq-grid { grid-template-columns: 1fr; }
+      .quick-cats { grid-template-columns: repeat(2, 1fr); }
+      .section { padding: 32px 0; }
+      .article { padding: 20px; }
+      .subscribe { padding: 24px; }
+      .sub-form { flex-direction: column; width: 100%; }
+      .sub-form input { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; gap: 18px; }
+      .update-item { flex-wrap: wrap; gap: 8px; }
+      .update-time { width: auto; }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="logo" href="/#home-top">
+        <span class="logo-mark"></span>
+        91今日大乱斗
+      </a>
+      <nav class="nav-links">
+        <a href="/#hot-list">今日热榜</a>
+        <a href="/#daily-update">每日阵容</a>
+        <a href="/#deep-analysis">版本解析</a>
+        <a href="/#hero-guide">英雄指南</a>
+        <a href="/#faq-zone">常见问题</a>
+        <a href="/#community-voice">社区讨论</a>
+        <a href="/#news-feed">乱斗资讯</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn ghost" href="/#subscribe">订阅提醒</a>
+        <a class="btn orange" href="/#daily-update">看今日阵容</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home-top">
+
+    <!-- 首屏 Banner -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="hero-badge"><span class="pulse"></span> 2026年11月7日 · 今日大乱斗数据已更新</div>
+          <h1>91今日大乱斗：<span>每日阵容与版本答案</span></h1>
+          <p class="hero-desc">
+            每天打开91今日大乱斗，先看今日英雄强度、随机池变化和乱斗节奏，再决定这把怎么选、怎么打。无论你是想快速了解版本答案，还是想找一套适合自己手感的乱斗阵容，这里都能提供参考。
+          </p>
+          <p class="hero-desc">
+            页面围绕91今日大乱斗的热门对局、英雄胜率、符文出装和社区反馈整理内容，适合通勤路上快速浏览，也适合开黑前和队友一起研究今日大乱斗的选人思路。
+          </p>
+          <form class="hero-search" action="/#daily-update" method="get">
+            <input type="text" name="q" placeholder="搜索今日英雄、阵容搭配或乱斗关键词">
+            <button class="btn orange" type="submit">搜索阵容</button>
+          </form>
+          <div class="hero-tags">
+            <a href="/#hot-list">今日胜率榜</a>
+            <a href="/#daily-update">随机池变化</a>
+            <a href="/#hero-guide">前排坦克</a>
+            <a href="/#hero-guide">远程消耗</a>
+            <a href="/#deep-analysis">版本答案</a>
+            <a href="/#community-voice">玩家实测</a>
+            <a href="/#news-feed">乱斗公告</a>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="hero-stat">
+            <div class="stat-num">76%</div>
+            <div>
+              <strong>今日大乱斗热度</strong>
+              <small>较昨日上涨，阵容讨论集中在高胜率前排</small>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num blue">28</div>
+            <div>
+              <strong>热门英雄条目</strong>
+              <small>覆盖91今日大乱斗常见选人与搭配</small>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-num gold">19:30</div>
+            <div>
+              <strong>晚间阵容更新</strong>
+              <small>每日晚间补充社区实测与对局反馈</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 快捷分类入口 -->
+    <section class="section" id="quick-entry">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>乱斗分类入口</h2>
+          <p>按定位快速找到今日大乱斗的选人方向</p>
+        </div>
+        <div class="quick-cats">
+          <a class="cat-chip" href="/#hero-guide">前排坦克<span>承伤开团</span></a>
+          <a class="cat-chip" href="/#hero-guide">战士斗士<span>持续作战</span></a>
+          <a class="cat-chip" href="/#hero-guide">法师爆发<span>技能消耗</span></a>
+          <a class="cat-chip" href="/#hero-guide">射手输出<span>远程点杀</span></a>
+          <a class="cat-chip" href="/#hero-guide">软辅保护<span>功能增益</span></a>
+          <a class="cat-chip" href="/#hero-guide">刺客切入<span>收割残局</span></a>
+          <a class="cat-chip" href="/#deep-analysis">符文出装<span>版本适配</span></a>
+          <a class="cat-chip" href="/#community-voice">社区实测<span>玩家反馈</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 热门推荐 -->
+    <section class="section" id="hot-list">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>今日大乱斗热门推荐</h2>
+          <p>根据近期对局与社区讨论整理的6个方向</p>
+        </div>
+        <div class="grid-3">
+          <article class="card rec-card">
+            <div class="rec-cover">
+              <span class="tag cover-tag">前排首选</span>
+              <span class="cover-title">巨魔战将 · 乱斗搅局</span>
+            </div>
+            <h3>巨魔战将 91今日大乱斗出装思路</h3>
+            <p>大乱斗里巨魔的回复和柱状控制都很实用，适合对面近战偏多时拿出来压缩阵型。</p>
+            <div class="rec-meta"><span class="tag blue">坦克</span><span class="tag gray">持续回复</span><b>胜率 54.2%</b></div>
+          </article>
+          <article class="card rec-card">
+            <div class="rec-cover">
+              <span class="tag cover-tag">远程消耗</span>
+              <span class="cover-title">爆破鬼才 · 清线压制</span>
+            </div>
+            <h3>爆破鬼才 大乱斗清线节奏</h3>
+            <p>手长、清线快，能在91今日大乱斗中稳定压塔，但要注意站位避免被强开。</p>
+            <div class="rec-meta"><span class="tag blue">法师</span><span class="tag gray">清线</span><b>胜率 52.8%</b></div>
+          </article>
+          <article class="card rec-card">
+            <div class="rec-cover">
+              <span class="tag cover-tag">收割位</span>
+              <span class="cover-title">不祥之刃 · 残局收割</span>
+            </div>
+            <h3>不祥之刃 乱斗进场时机</h3>
+            <p>卡特在混乱团战里找第二波进场很关键，91今日大乱斗中建议后手选，等控制交完再切入。</p>
+            <div class="rec-meta"><span class="tag blue">刺客</span><span class="tag gray">收割</span><b>胜率 51.9%</b></div>
+          </article>
+          <article class="card rec-card">
+            <div class="rec-cover">
+              <span class="tag cover-tag">功能辅助</span>
+              <span class="cover-title">仙灵女巫 · 保护增益</span>
+            </div>
+            <h3>仙灵女巫 今日大乱斗保护思路</h3>
+            <p>璐璐在乱斗里更像移动增益器，适合搭配大核射手，变羊也能打断突进节奏。</p>
+            <div class="rec-meta"><span class="tag gold">辅助</span><span class="tag gray">保护</span><b>胜率 53.6%</b></div>
+          </article>
+          <article class="card rec-card">
+            <div class="rec-cover">
+              <span class="tag cover-tag">持续输出</span>
+              <span class="cover-title">惩戒之箭 · 远程点杀</span>
+            </div>
+            <h3>惩戒之箭 大乱斗站位细节</h3>
+            <p>韦鲁斯在91今日大乱斗里适合走消耗流，Q技能蓄力抽奖，团战前压低血线很舒服。</p>
+            <div class="rec-meta"><span class="tag blue">射手</span><span class="tag gray">消耗</span><b>胜率 52.1%</b></div>
+          </article>
+          <article class="card rec-card">
+            <div class="rec-cover">
+              <span class="tag cover-tag">开团手</span>
+              <span class="cover-title">牛头酋长 · 强开反打</span>
+            </div>
+            <h3>牛头酋长 乱斗开团时机</h3>
+            <p>牛头在窄地形里非常强势，91今日大乱斗中搭配高爆发队友，二连开团能直接打乱对面阵型。</p>
+            <div class="rec-meta"><span class="tag gold">坦克</span><span class="tag gray">开团</span><b>胜率 53.3%</b></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最新更新 / 热播动态 -->
+    <section class="section" id="daily-update">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>91今日大乱斗最新动态</h2>
+          <p>截至2026年11月7日，阵容池与社区讨论更新</p>
+        </div>
+        <div class="update-list">
+          <div class="update-item"><span class="update-time">11-07 09:10</span><strong>今日大乱斗随机池已刷新，高胜率前排英雄占比上升</strong><span class="tag">阵容更新</span></div>
+          <div class="update-item"><span class="update-time">11-07 10:20</span><strong>91今日大乱斗玩家实测：巨魔+璐璐组合讨论度持续走高</strong><span class="tag blue">社区热议</span></div>
+          <div class="update-item"><span class="update-time">11-07 11:05</span><strong>版本答案补充：爆破鬼才在乱斗中的清线优先级上调</strong><span class="tag gold">版本解析</span></div>
+          <div class="update-item"><span class="update-time">11-07 12:30</span><strong>午间对局反馈：射手位建议后手选，避免被强开阵容针对</strong><span class="tag">实战提示</span></div>
+          <div class="update-item"><span class="update-time">11-07 14:00</span><strong>91今日大乱斗符文页更新，新增两套坦克通用符文参考</strong><span class="tag blue">符文出装</span></div>
+          <div class="update-item"><span class="update-time">11-07 15:40</span><strong>牛头酋长开团角度讨论：窄口地形胜率明显高于开阔地</strong><span class="tag">英雄解析</span></div>
+          <div class="update-item"><span class="update-time">11-07 17:10</span><strong>晚间预告：19:30 更新今日大乱斗高分段对局观察</strong><span class="tag gold">更新预告</span></div>
+          <div class="update-item"><span class="update-time">11-07 18:05</span><strong>91今日大乱斗评论区新增“今日踩坑榜”，欢迎分享翻车阵容</strong><span class="tag">社区互动</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 深度解析正文 -->
+    <section class="section" id="deep-analysis">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>91今日大乱斗深度解析</h2>
+          <p>从阵容搭配到节奏理解，读懂今日乱斗的版本方向</p>
+        </div>
+        <div class="deep-grid">
+          <article class="article">
+            <p class="lead">很多玩家搜索91今日大乱斗，并不是只想看一个简单的英雄列表，而是希望快速判断今天该选什么、哪些英雄在随机池里更舒服、阵容缺什么位置。大乱斗的节奏比常规对局更快，英雄池和符文搭配对胜负的影响也更直接，所以本页把重点放在“今天怎么打”而不是“背数据”。</p>
+            <h3>今日大乱斗的类型特点与节奏</h3>
+            <p>大乱斗是单线团战模式，玩家从随机池中选人，装备和等级成长速度较快，团战频率高。91今日大乱斗的内容方向也因此更强调即时性：今天的随机池偏向哪类英雄、前排数量是否充足、远程消耗位是否容易拿到，都会影响对局体验。相比常规模式的运营，大乱斗更考验开团时机、技能交换和残局处理。</p>
+            <h3>英雄选择与阵容搭配</h3>
+            <p>今日大乱斗中，前排英雄的价值依然稳定。巨魔战将、牛头酋长这类能抗能开的角色，在窄地形里容易压缩对手站位；法师和射手则要看队友是否愿意让出保护位。91今日大乱斗的选人思路可以概括为：先保证阵容有至少一个稳定开团点，再补足清线和持续输出，最后根据对手阵容决定是否拿刺客收割。</p>
+            <h3>符文与出装的版本适配</h3>
+            <p>大乱斗的符文选择不能完全照搬峡谷。比如坦克英雄更看重回复和韧性，法师可以优先考虑技能急速与法穿，射手在乱斗里要兼顾生存和吸血。91今日大乱斗的版本答案不是固定的一套，而是根据今日随机池和队友阵容灵活调整。若己方缺少前排，优先补坦克装；若对面突进多，辅助位可以提前做保护装。</p>
+            <h3>适合人群与内容消费建议</h3>
+            <p>这个页面适合喜欢快节奏团战、喜欢研究阵容搭配的玩家，也适合每天只有碎片时间、想快速了解91今日大乱斗热门方向的上班族。建议先看今日热榜和最新动态，再进入深度解析看阵容思路，最后结合评论区玩家实测调整自己的选人偏好。不要只看单一胜率，大乱斗的随机性和队友配合往往比纸面数据更重要。</p>
+            <h3>同类内容比较与搜索意图</h3>
+            <p>与常规攻略站相比，91今日大乱斗更强调“今日”这个时间维度。读者通常想知道今天随机池里哪些英雄容易拿到、哪些组合在社区里讨论度高、有没有新的符文出装变化。因此页面把热门推荐、最新动态、FAQ和评论放在靠前位置，方便快速浏览。如果后续需要更细的英雄对线细节，可以再进入对应英雄指南模块。</p>
+          </article>
+          <aside class="side-box" id="hero-guide">
+            <h3>今日英雄方向速览</h3>
+            <div class="side-list">
+              <a href="/#hot-list">巨魔战将 <small>前排搅局</small></a>
+              <a href="/#hot-list">爆破鬼才 <small>远程清线</small></a>
+              <a href="/#hot-list">不祥之刃 <small>残局收割</small></a>
+              <a href="/#hot-list">仙灵女巫 <small>保护增益</small></a>
+              <a href="/#hot-list">惩戒之箭 <small>消耗点杀</small></a>
+              <a href="/#hot-list">牛头酋长 <small>强开反打</small></a>
+            </div>
+            <h3 style="margin-top:20px;">91今日大乱斗标签</h3>
+            <div class="hero-tags" style="margin-top:0;">
+              <a href="/#daily-update">今日随机池</a>
+              <a href="/#deep-analysis">版本答案</a>
+              <a href="/#hero-guide">英雄指南</a>
+              <a href="/#community-voice">玩家实测</a>
+              <a href="/#faq-zone">新手问答</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 体验指南 -->
+    <section class="section" id="experience-guide">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>浏览与体验指南</h2>
+          <p>如何高效使用91今日大乱斗页面</p>
+        </div>
+        <div class="grid-3">
+          <div class="card rec-card">
+            <h3>先看今日热榜</h3>
+            <p>快速了解91今日大乱斗当前讨论度较高的英雄和阵容方向，适合开黑前扫一眼。</p>
+          </div>
+          <div class="card rec-card">
+            <h3>再看最新动态</h3>
+            <p>随机池变化、符文更新和玩家反馈都会在这里体现，信息按时间排序，阅读负担较低。</p>
+          </div>
+          <div class="card rec-card">
+            <h3>最后看深度解析</h3>
+            <p>如果时间充裕，进入深度解析了解阵容搭配和节奏理解，再回到评论区看实测反馈。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq-zone">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>91今日大乱斗常见问题</h2>
+          <p>围绕今日阵容、选人顺序和版本理解整理</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>91今日大乱斗今天先选什么位置比较稳？</h3>
+            <p>优先看阵容缺不缺前排。今日大乱斗随机池里如果坦克和开团手较多，可以先拿输出位；如果队友都偏脆，建议补一个能抗能开的英雄，避免团战一触即溃。</p>
+          </div>
+          <div class="faq-item">
+            <h3>今日大乱斗的版本答案是不是固定不变的？</h3>
+            <p>不是。91今日大乱斗的版本答案会随随机池、玩家讨论和符文调整变化。建议把热榜和最新动态结合起来看，不要只盯一个英雄或一套出装。</p>
+          </div>
+          <div class="faq-item">
+            <h3>新手适合从哪些英雄开始看？</h3>
+            <p>可以从操作门槛较低的前排和功能辅助入手，比如牛头酋长、仙灵女巫。先理解开团和保护的基本节奏，再看射手和刺客的进场时机，会更容易上手91今日大乱斗。</p>
+          </div>
+          <div class="faq-item">
+            <h3>大乱斗里符文出装需要每局都改吗？</h3>
+            <p>不必每局大改，但要根据阵容微调。对面突进多就补生存，己方缺前排就补坦度。91今日大乱斗的符文思路更强调适配当前对局，而不是一套符文打到底。</p>
+          </div>
+          <div class="faq-item">
+            <h3>评论区说的“今日踩坑榜”是什么？</h3>
+            <p>这是社区玩家分享翻车阵容和不适配选择的讨论区。它和胜率榜形成互补，能帮助读者理解哪些组合看起来强、实际配合起来却容易出问题。</p>
+          </div>
+          <div class="faq-item">
+            <h3>在哪里看91今日大乱斗后续更新？</h3>
+            <p>可以关注本页的最新动态和资讯流，晚间会补充高分段对局观察与社区实测。页脚也提供了订阅入口，方便下次直接回到今日大乱斗专题。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="section" id="community-voice">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>社区短评与实测反馈</h2>
+          <p>来自近期评论区的自然讨论，不代表官方结论</p>
+        </div>
+        <div class="comment-grid">
+          <div class="comment"><div class="comment-head"><span class="avatar">风</span><strong>风一样的召唤</strong><small>11-06</small></div><p>今天随机池前排挺多，巨魔确实好用，柱子卡位很舒服，推荐试试。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">橘</span><strong>橘子汽水</strong><small>11-06</small></div><p>爆破鬼才清线是真的快，但被强开就没脾气，站位还是得注意。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">夜</span><strong>夜航星</strong><small>11-05</small></div><p>91今日大乱斗的每日更新挺及时的，晚上回来看一眼就能知道今天玩什么。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">阿</span><strong>阿木木不哭</strong><small>11-05</small></div><p>牛头开团角度确实重要，窄口和开阔地完全两个手感。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">小</span><strong>小鹿乱撞</strong><small>11-04</small></div><p>璐璐配大核射手很稳，但队友不选输出的话会比较尴尬。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">慢</span><strong>慢慢打</strong><small>11-04</small></div><p>今天踩坑了一把全脆皮阵容，团战一碰就碎，建议至少补一个前排。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">半</span><strong>半糖去冰</strong><small>11-03</small></div><p>91今日大乱斗的评论比纯数据好看，能看到别人实际怎么玩。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">星</span><strong>星尘落烬</strong><small>11-03</small></div><p>卡特后手进场确实舒服，但前面得忍住，别第一个冲。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">南</span><strong>南巷旧人</strong><small>11-02</small></div><p>希望多更新一点符文页，有时候出装会换，符文懒得改。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">大</span><strong>大碗宽面</strong><small>11-02</small></div><p>韦鲁斯消耗流在乱斗里挺吃队友保护的，单排慎选。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">一</span><strong>一只小海豹</strong><small>11-01</small></div><p>今天的随机池感觉法师偏多，法穿装备优先级可以提前。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">路</span><strong>路人甲乙丙</strong><small>10-31</small></div><p>91今日大乱斗适合开黑前看，信息集中，不用到处翻攻略。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">柠</span><strong>柠檬不萌</strong><small>10-30</small></div><p>评论区能不能多来点高分段实测，想看更细的团战处理。</p></div>
+          <div class="comment"><div class="comment-head"><span class="avatar">青</span><strong>青灯夜游</strong><small>10-29</small></div><p>今日大乱斗的节奏比匹配快多了，阵容搭配真的比个人操作重要。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 资讯流 -->
+    <section class="section" id="news-feed">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>乱斗资讯与版本动态</h2>
+          <p>围绕91今日大乱斗的内容更新和社区观察</p>
+        </div>
+        <div class="news-grid">
+          <article class="card news-card">
+            <span class="news-date">2026-11-07</span>
+            <h3>今日大乱斗随机池观察：前排与法师占比提升</h3>
+            <p>从今日对局反馈看，前排英雄出现频率较高，法师清线位的选择空间也更大。91今日大乱斗建议优先保证阵容有开团点。</p>
+          </article>
+          <article class="card news-card">
+            <span class="news-date">2026-11-06</span>
+            <h3>91今日大乱斗社区实测：巨魔+璐璐组合讨论升温</h3>
+            <p>玩家反馈巨魔的搅局能力配合璐璐的保护增益，在中期小规模团战里表现稳定，但需要注意对方远程消耗。</p>
+          </article>
+          <article class="card news-card">
+            <span class="news-date">2026-11-05</span>
+            <h3>符文出装补充：坦克通用页与法穿优先级</h3>
+            <p>91今日大乱斗的符文参考新增了两套坦克通用思路，法师位在对面偏脆时可以提前考虑法穿装备。</p>
+          </article>
+          <article class="card news-card">
+            <span class="news-date">2026-11-04</span>
+            <h3>牛头酋长开团角度成为今日热门讨论点</h3>
+            <p>窄地形里的牛头二连更容易命中多人，社区建议开团前先观察队友位置，避免脱节。</p>
+          </article>
+          <article class="card news-card">
+            <span class="news-date">2026-11-03</span>
+            <h3>91今日大乱斗晚间更新计划：高分段对局观察</h3>
+            <p>晚间时段会补充高分段玩家的选人偏好和团战处理，帮助读者理解今日阵容的实际表现。</p>
+          </article>
+          <article class="card news-card">
+            <span class="news-date">2026-11-02</span>
+            <h3>今日大乱斗踩坑榜上线：全脆皮阵容讨论最多</h3>
+            <p>社区评论中，全脆皮阵容成为高频踩坑点。91今日大乱斗建议至少保留一个稳定前排，再考虑输出位的搭配。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 订阅引导 -->
+    <section class="section" id="subscribe">
+      <div class="wrap">
+        <div class="subscribe">
+          <div>
+            <h2>订阅91今日大乱斗每日提醒</h2>
+            <p>留下邮箱占位，接收今日阵容、版本解析和社区实测更新提醒。</p>
+          </div>
+          <form class="sub-form" action="/#subscribe" method="get">
+            <input type="email" placeholder="输入邮箱地址">
+            <button class="btn orange" type="submit">订阅更新</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom:10px;">
+            <span class="logo-mark"></span>
+            91今日大乱斗
+          </div>
+          <p class="footer-desc">每日整理大乱斗阵容方向、英雄思路与社区反馈，帮助玩家快速了解今日版本变化。</p>
+        </div>
+        <div>
+          <h4>内容栏目</h4>
+          <a href="/#hot-list">今日热榜</a>
+          <a href="/#daily-update">每日阵容</a>
+          <a href="/#deep-analysis">版本解析</a>
+          <a href="/#hero-guide">英雄指南</a>
+        </div>
+        <div>
+          <h4>社区与资讯</h4>
+          <a href="/#community-voice">社区讨论</a>
+          <a href="/#news-feed">乱斗资讯</a>
+          <a href="/#faq-zone">常见问题</a>
+          <a href="/#subscribe">订阅提醒</a>
+        </div>
+        <div>
+          <h4>友情链接占位</h4>
+          <a href="/#home-top">内容首页</a>
+          <a href="/#quick-entry">分类入口</a>
+          <a href="/#experience-guide">体验指南</a>
+          <a href="/#hero-guide">英雄速览</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© 2026 91今日大乱斗内容专题页 · 本站内容为信息整理与社区观点汇总，仅供参考。</span>
+        <span>免责声明：页面数据与评论为模拟展示，不构成任何保证；请以实际游戏体验为准。</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+  </html>
