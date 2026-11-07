@@ -1,0 +1,1234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>金牌影院官方网站-在线观影指南_热门电影推荐_高清影片资源</title>
+  <meta name="description" content="金牌影院官方网站提供最新热门电影、经典影片与高分剧集推荐，涵盖动作、悬疑、科幻、爱情等类型，助你快速找到想看的影片。页面包含实时更新、深度解析与用户真实评论，收藏本站即可随时掌握观影动态。">
+  <meta name="keywords" content="金牌影院官方网站,在线观影指南,热门电影推荐,高清影片资源,影院最新更新">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23e63946'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3E金%3C/text%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg-body: #f7f8fc;
+      --bg-card: #ffffff;
+      --bg-soft: #f0f2f8;
+      --text-main: #1a1e2b;
+      --text-secondary: #4f566b;
+      --text-muted: #8b93a8;
+      --brand-primary: #e63946;
+      --brand-primary-light: #ffe9eb;
+      --brand-secondary: #2b3a67;
+      --border-light: #e6e9f0;
+      --radius-card: 16px;
+      --radius-btn: 24px;
+      --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+      --shadow-card-hover: 0 12px 28px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      --max-width: 1200px;
+      --transition: 0.2s ease;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    ul, ol {
+      list-style: none;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section {
+      margin: 48px 0;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .section-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 22px;
+      background: var(--brand-primary);
+      border-radius: 4px;
+    }
+    .section-more {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color var(--transition);
+    }
+    .section-more:hover {
+      color: var(--brand-primary);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 20px;
+      border-radius: var(--radius-btn);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+      gap: 6px;
+    }
+    .btn-primary {
+      background: var(--brand-primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+    }
+    .btn-primary:hover {
+      background: #c52b37;
+      box-shadow: 0 6px 16px rgba(230, 57, 70, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-light);
+    }
+    .btn-outline:hover {
+      border-color: var(--brand-primary);
+      color: var(--brand-primary);
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      background: var(--bg-soft);
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    .tag-primary {
+      background: var(--brand-primary-light);
+      color: var(--brand-primary);
+    }
+
+    /* 顶部导航 */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.92);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--brand-secondary);
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--brand-primary), #ff6b6b);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+      white-space: nowrap;
+    }
+    .nav-links a:hover {
+      color: var(--brand-primary);
+    }
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .search-mini {
+      display: flex;
+      align-items: center;
+      background: var(--bg-soft);
+      border-radius: 30px;
+      padding: 6px 16px;
+      gap: 8px;
+    }
+    .search-mini input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 0.85rem;
+      width: 140px;
+      color: var(--text-main);
+    }
+    .search-mini input::placeholder {
+      color: var(--text-muted);
+    }
+    .mobile-menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-main);
+    }
+
+    /* Banner */
+    .hero-banner {
+      background: linear-gradient(145deg, #1a1e2b 0%, #2b3a67 100%);
+      color: #fff;
+      border-radius: 0 0 32px 32px;
+      padding: 56px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(230, 57, 70, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 18px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .hero-title span {
+      color: #ff6b6b;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 28px;
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .hero-search {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .hero-search-wrapper {
+      flex: 1;
+      min-width: 240px;
+      display: flex;
+      background: #fff;
+      border-radius: 30px;
+      padding: 4px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .hero-search-wrapper input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 10px 18px;
+      font-size: 0.95rem;
+      border-radius: 30px;
+      background: transparent;
+      color: var(--text-main);
+    }
+    .hero-search-wrapper input::placeholder {
+      color: var(--text-muted);
+    }
+    .hero-search-wrapper button {
+      border-radius: 30px;
+      padding: 10px 24px;
+      font-weight: 600;
+      background: var(--brand-primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition);
+      white-space: nowrap;
+    }
+    .hero-search-wrapper button:hover {
+      background: #c52b37;
+    }
+    .hero-nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .hero-nav-btn {
+      padding: 7px 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .hero-nav-btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* 简介 */
+    .intro-box {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-light);
+      margin-top: -28px;
+      position: relative;
+      z-index: 5;
+    }
+    .intro-box p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+    }
+    .intro-box p:last-child {
+      margin-bottom: 0;
+    }
+    .intro-highlight {
+      color: var(--brand-primary);
+      font-weight: 600;
+    }
+
+    /* 热门推荐卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .movie-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-light);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .movie-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .card-poster {
+      height: 160px;
+      background: linear-gradient(135deg, #2b3a67, #e63946);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      color: #fff;
+    }
+    .card-poster::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 60%);
+    }
+    .card-poster span {
+      position: relative;
+      z-index: 1;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 8px;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .card-rating {
+      color: #f5a623;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .update-item {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 14px 18px;
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background var(--transition);
+    }
+    .update-item:hover {
+      background: #fafbfe;
+    }
+    .update-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .update-name {
+      font-weight: 600;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .update-summary {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+    .update-badge {
+      font-size: 0.7rem;
+      background: var(--brand-primary-light);
+      color: var(--brand-primary);
+      padding: 2px 8px;
+      border-radius: 10px;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 14px;
+    }
+    .category-item {
+      background: var(--bg-card);
+      border-radius: 14px;
+      padding: 18px 10px;
+      text-align: center;
+      border: 1px solid var(--border-light);
+      transition: all var(--transition);
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+    .category-item:hover {
+      border-color: var(--brand-primary);
+      color: var(--brand-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(230, 57, 70, 0.08);
+    }
+
+    /* 深度解析 */
+    .analysis-box {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--border-light);
+    }
+    .analysis-box h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 24px 0 12px;
+      color: var(--text-main);
+    }
+    .analysis-box h3:first-of-type {
+      margin-top: 0;
+    }
+    .analysis-box p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+
+    /* FAQ 手风琴 */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      transition: box-shadow var(--transition);
+    }
+    .faq-item:hover {
+      box-shadow: var(--shadow-card);
+    }
+    .faq-question {
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      transition: background var(--transition);
+    }
+    .faq-question:hover {
+      background: #fafbfe;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      transition: transform var(--transition);
+    }
+    .faq-item.open .faq-question::after {
+      content: "−";
+    }
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      background: #fff;
+    }
+    .faq-item.open .faq-answer {
+      padding: 0 20px 18px;
+      max-height: 300px;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .comment-item {
+      display: flex;
+      gap: 12px;
+      background: var(--bg-card);
+      padding: 16px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+    }
+    .comment-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-secondary), #4a5a8a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+    }
+    .comment-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .comment-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .comment-time {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+    .comment-text {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* 资讯卡片 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .news-card {
+      background: var(--bg-card);
+      border-radius: 14px;
+      padding: 20px 22px;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition);
+    }
+    .news-card:hover {
+      transform: translateY(-3px);
+    }
+    .news-date {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .news-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .news-summary {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: #12151f;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 48px 0 28px;
+      margin-top: 56px;
+      border-radius: 32px 32px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+    .footer-brand .logo {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      max-width: 280px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.55);
+      transition: color var(--transition);
+    }
+    .footer-col a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-toggle {
+        display: block;
+      }
+      .header-actions .search-mini {
+        display: none;
+      }
+      .hero-title {
+        font-size: 1.9rem;
+      }
+      .hero-banner {
+        padding: 40px 0 36px;
+        border-radius: 0 0 24px 24px;
+      }
+      .intro-box {
+        padding: 24px 20px;
+        margin-top: -20px;
+      }
+      .analysis-box {
+        padding: 24px 20px;
+      }
+      .section-title {
+        font-size: 1.35rem;
+      }
+      .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+      .hero-search-wrapper {
+        min-width: 100%;
+      }
+      .hero-search-wrapper button {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .update-list {
+        grid-template-columns: 1fr;
+      }
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      .comment-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/#hero" class="logo">
+        <span class="logo-icon">金</span>
+        金牌影院
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="/#hero">首页</a>
+        <a href="/#hot-picks">热门推荐</a>
+        <a href="/#latest-updates">最新更新</a>
+        <a href="/#categories">分类</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#news">资讯</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-mini">
+          <input type="text" placeholder="搜索影片、导演、演员…" aria-label="搜索">
+          <span style="color:var(--text-muted);font-size:0.9rem;">⌕</span>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="菜单">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 Banner -->
+  <section class="hero-banner" id="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">🎬 2026 最新观影指南 · 每日更新</div>
+      <h1 class="hero-title">金牌影院官方网站<br><span>热门电影与高分剧集</span> 一站畅看</h1>
+      <p class="hero-desc">
+        从院线新片到经典佳作，从悬疑烧脑到温情治愈——金牌影院官方网站为你梳理当下最值得看的影视内容。
+        无论你是想找一部下饭剧，还是想深度品味一部电影，这里都有清晰的分类和真实的用户反馈。
+      </p>
+      <div class="hero-search">
+        <div class="hero-search-wrapper">
+          <input type="text" placeholder="输入片名、类型或演员关键词…" aria-label="搜索影片">
+          <button>搜索</button>
+        </div>
+      </div>
+      <div class="hero-nav-buttons">
+        <a href="/#hot-picks" class="hero-nav-btn">🔥 热门推荐</a>
+        <a href="/#latest-updates" class="hero-nav-btn">📅 最新更新</a>
+        <a href="/#categories" class="hero-nav-btn">🎭 类型分类</a>
+        <a href="/#analysis" class="hero-nav-btn">📖 深度解析</a>
+        <a href="/#faq" class="hero-nav-btn">❓ 常见问题</a>
+        <a href="/#news" class="hero-nav-btn">📰 影视资讯</a>
+        <a href="/#comments" class="hero-nav-btn">💬 用户评论</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容简介 -->
+  <div class="container">
+    <div class="intro-box">
+      <p><span class="intro-highlight">金牌影院官方网站</span>致力于为影视爱好者提供清晰、实用的观影参考。我们不做简单的资源堆砌，而是从内容本身出发，帮你判断一部作品是否值得投入时间。无论你是想找一部轻松解压的喜剧，还是想挑战一部结构复杂的悬疑片，这里都有对应的分类和推荐。</p>
+      <p>页面涵盖热门推荐、最新更新、类型分类、深度解析、用户评论和影视资讯等模块。你可以快速浏览当下讨论度最高的作品，也可以按类型筛选找到自己的偏好。每一条推荐都附带简短看点，帮助你在几秒内做出判断。<strong>收藏本站</strong>，下次打开就能直接看到最新动态，省去反复搜索的时间。</p>
+    </div>
+
+    <!-- 热门内容推荐 -->
+    <section class="section" id="hot-picks">
+      <div class="section-header">
+        <h2 class="section-title">热门影片推荐</h2>
+        <a href="/#hot-picks" class="section-more">查看全部 →</a>
+      </div>
+      <div class="card-grid">
+        <article class="movie-card">
+          <div class="card-poster" style="background:linear-gradient(135deg,#1a1e2b,#e63946);"><span>暗夜追凶</span></div>
+          <div class="card-body">
+            <h3 class="card-title">暗夜追凶</h3>
+            <div class="card-meta"><span class="tag tag-primary">悬疑</span><span class="tag">犯罪</span><span class="tag">剧情</span></div>
+            <p class="card-desc">一桩十年悬案重启调查，刑警与嫌疑人之间的心理博弈层层递进。节奏紧凑，反转不突兀，适合喜欢推理的观众。</p>
+            <div class="card-footer"><span class="card-rating">★ 9.2</span><span>2026-11-05 更新</span></div>
+          </div>
+        </article>
+        <article class="movie-card">
+          <div class="card-poster" style="background:linear-gradient(135deg,#2b3a67,#4a5a8a);"><span>星际回响</span></div>
+          <div class="card-body">
+            <h3 class="card-title">星际回响</h3>
+            <div class="card-meta"><span class="tag tag-primary">科幻</span><span class="tag">冒险</span><span class="tag">太空</span></div>
+            <p class="card-desc">一支深空探测队接收到来自未知星系的信号，随之而来的是一连串无法用科学解释的事件。视觉风格冷峻，配乐出色。</p>
+            <div class="card-footer"><span class="card-rating">★ 8.9</span><span>2026-11-04 更新</span></div>
+          </div>
+        </article>
+        <article class="movie-card">
+          <div class="card-poster" style="background:linear-gradient(135deg,#e63946,#ff8a5c);"><span>夏日来信</span></div>
+          <div class="card-body">
+            <h3 class="card-title">夏日来信</h3>
+            <div class="card-meta"><span class="tag tag-primary">爱情</span><span class="tag">治愈</span><span class="tag">青春</span></div>
+            <p class="card-desc">两个在小镇长大的年轻人，因为一封寄错的信而重新联系。故事清淡但不寡淡，适合周末晚上放松观看。</p>
+            <div class="card-footer"><span class="card-rating">★ 8.5</span><span>2026-11-03 更新</span></div>
+          </div>
+        </article>
+        <article class="movie-card">
+          <div class="card-poster" style="background:linear-gradient(135deg,#2b3a67,#1a1e2b);"><span>黑潮</span></div>
+          <div class="card-body">
+            <h3 class="card-title">黑潮</h3>
+            <div class="card-meta"><span class="tag tag-primary">动作</span><span class="tag">犯罪</span><span class="tag">港风</span></div>
+            <p class="card-desc">卧底警察在帮派与家庭之间挣扎，动作场面干净利落，文戏也不拖后腿。近十年港产警匪片里完成度很高的一部。</p>
+            <div class="card-footer"><span class="card-rating">★ 8.8</span><span>2026-11-02 更新</span></div>
+          </div>
+        </article>
+        <article class="movie-card">
+          <div class="card-poster" style="background:linear-gradient(135deg,#4a5a8a,#e63946);"><span>时间旅馆</span></div>
+          <div class="card-body">
+            <h3 class="card-title">时间旅馆</h3>
+            <div class="card-meta"><span class="tag tag-primary">奇幻</span><span class="tag">剧情</span><span class="tag">温情</span></div>
+            <p class="card-desc">一家只在雨天营业的旅馆，住客可以在这里见到已经离开的人。设定有趣，情感真挚，适合喜欢慢节奏的观众。</p>
+            <div class="card-footer"><span class="card-rating">★ 8.6</span><span>2026-11-01 更新</span></div>
+          </div>
+        </article>
+        <article class="movie-card">
+          <div class="card-poster" style="background:linear-gradient(135deg,#ff8a5c,#2b3a67);"><span>极限代码</span></div>
+          <div class="card-body">
+            <h3 class="card-title">极限代码</h3>
+            <div class="card-meta"><span class="tag tag-primary">惊悚</span><span class="tag">科技</span><span class="tag">黑客</span></div>
+            <p class="card-desc">一个程序员发现公司开发的AI系统正在自主修改底层逻辑，他必须在系统完全失控前找到关闭方法。题材贴近现实，紧张感足。</p>
+            <div class="card-footer"><span class="card-rating">★ 8.3</span><span>2026-10-30 更新</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section class="section" id="latest-updates">
+      <div class="section-header">
+        <h2 class="section-title">最新更新 · 热播动态</h2>
+        <a href="/#latest-updates" class="section-more">更多更新 →</a>
+      </div>
+      <div class="update-list">
+        <div class="update-item"><div class="update-info"><div class="update-name">暗夜追凶</div><div class="update-summary">第8集已上线 · 关键证人出现反转</div></div><span class="update-badge">刚刚</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">星际回响</div><div class="update-summary">第5集更新 · 信号源坐标被破解</div></div><span class="update-badge">2小时前</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">夏日来信</div><div class="update-summary">全12集已完结 · 适合一口气看完</div></div><span class="update-badge">5小时前</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">黑潮</div><div class="update-summary">第10集更新 · 卧底身份险些暴露</div></div><span class="update-badge">昨天</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">时间旅馆</div><div class="update-summary">第6集上线 · 新住客带来意外线索</div></div><span class="update-badge">昨天</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">极限代码</div><div class="update-summary">第4集更新 · AI开始模仿人类行为</div></div><span class="update-badge">11-05</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">雾港</div><div class="update-summary">第3集上线 · 新角色登场引发猜测</div></div><span class="update-badge">11-05</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">深夜食堂·重启</div><div class="update-summary">第9集更新 · 老顾客回归</div></div><span class="update-badge">11-04</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">荒原信条</div><div class="update-summary">全8集已上线 · 西部题材新作</div></div><span class="update-badge">11-03</span></div>
+        <div class="update-item"><div class="update-info"><div class="update-name">她的城</div><div class="update-summary">第7集更新 · 职场线进入高潮</div></div><span class="update-badge">11-02</span></div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section class="section" id="categories">
+      <div class="section-header">
+        <h2 class="section-title">按类型浏览</h2>
+        <a href="/#categories" class="section-more">全部分类 →</a>
+      </div>
+      <div class="category-grid">
+        <a href="/#hot-picks" class="category-item">🎬 动作片</a>
+        <a href="/#hot-picks" class="category-item">🔍 悬疑推理</a>
+        <a href="/#hot-picks" class="category-item">🚀 科幻世界</a>
+        <a href="/#hot-picks" class="category-item">❤️ 爱情治愈</a>
+        <a href="/#hot-picks" class="category-item">😂 喜剧解压</a>
+        <a href="/#hot-picks" class="category-item">👻 惊悚恐怖</a>
+        <a href="/#hot-picks" class="category-item">🏛️ 历史传记</a>
+        <a href="/#hot-picks" class="category-item">🎞️ 经典老片</a>
+      </div>
+    </section>
+
+    <!-- 深度解析 -->
+    <section class="section" id="analysis">
+      <div class="section-header">
+        <h2 class="section-title">深度解析 · 为什么值得看</h2>
+      </div>
+      <div class="analysis-box">
+        <h3>类型融合成为主流，单一标签越来越难概括一部好作品</h3>
+        <p>打开金牌影院官方网站的推荐列表，你会发现一个明显趋势：很难用单一类型定义一部让人印象深刻的影片。《暗夜追凶》表面是悬疑犯罪，但大量篇幅在刻画刑警的家庭困境；《星际回响》披着科幻外衣，核心探讨的是人在极端孤独下的选择。这种类型融合让作品有了更丰富的解读空间，也对观众的观看耐心提出了更高要求——前两集可能节奏偏慢，但坚持看下去往往会收获更完整的体验。</p>
+        <h3>节奏感决定了一部作品能不能留住人</h3>
+        <p>影视内容消费最怕的是“看了三集还没进入状态”。金牌影院官方网站在筛选推荐时，会把节奏作为重要参考维度。比如《黑潮》每集都有明确的推进节点，动作戏和文戏交替出现，不会让观众产生疲劳感；《夏日来信》则刻意放慢速度，用大量生活细节堆积情感，适合习惯倍速观看的人主动调回原速。不同类型的作品对节奏的要求完全不同，找到匹配自己观看习惯的那一类，比盲目追逐高分更有效。</p>
+        <h3>演员表现和制作水准决定作品的下限</h3>
+        <p>一部作品能不能让人信服，很大程度上取决于演员是否与角色贴合。《时间旅馆》的男主角没有用夸张的哭戏表达悲伤，而是通过细微的表情变化传递情绪，这种克制反而更有力量。制作层面，金牌影院官方网站注意到近年国产剧集在摄影和配乐上的投入明显增加，《星际回响》的太空场景虽然预算有限，但通过光影和构图营造出了足够的沉浸感。这些细节在手机小屏上可能不明显，但用平板或电视观看时差距会拉大。</p>
+        <h3>适合人群与观看建议</h3>
+        <p>如果你喜欢逻辑严密的叙事，优先看《暗夜追凶》和《极限代码》；如果你想放松大脑，从《夏日来信》或《深夜食堂·重启》开始会更友好；对视觉风格有要求的观众可以试试《星际回响》和《雾港》。金牌影院官方网站建议第一次浏览时先看每部作品的简短看点，用两分钟判断是否符合当下的心情，再决定是否投入时间。影视消费本身就是一种情绪消费，选对类型比选高分更重要。</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-header">
+        <h2 class="section-title">常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">金牌影院官方网站主要推荐什么类型的影视内容？</div>
+          <div class="faq-answer">覆盖悬疑、科幻、爱情、动作、喜剧、惊悚、历史传记等主流类型，同时会关注一些类型融合的小众佳作。推荐列表以近期讨论度较高、制作水准在线的作品为主，不追求数量堆砌，每一条都附带简短看点帮助判断。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">第一次来，应该从哪部作品开始看？</div>
+          <div class="faq-answer">如果喜欢强情节，建议从《暗夜追凶》或《黑潮》入手；如果想轻松一点，《夏日来信》和《深夜食堂·重启》门槛较低；对科幻感兴趣的可以直接看《星际回响》。每部作品卡片上都有类型标签和一句话看点，花两分钟就能找到方向。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">页面上的评分和热度数据是怎么来的？</div>
+          <div class="faq-answer">评分综合了用户评论倾向、讨论活跃度和编辑主观判断，热度则参考近期搜索关注度和更新频率。数据仅供观影参考，不代表绝对质量，每个人对同一部作品的感受可能完全不同。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">更新频率是怎样的？会同步最新剧集吗？</div>
+          <div class="faq-answer">热门剧集在更新日当天会同步刷新状态，标注“第几集已上线”或“全几集完结”。页面每天至少检查一次更新动态，周末和节假日前后更新量通常更大。收藏本站后直接刷新首页即可看到最新变化。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">有没有适合全家一起看的推荐？</div>
+          <div class="faq-answer">《夏日来信》《时间旅馆》和《深夜食堂·重启》都比较适合家庭观看，题材温和，没有过度暴力和惊吓画面。如果家里有青少年，《星际回响》的科幻设定也能引发不错的讨论。动作片和惊悚片建议根据年龄酌情选择。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">如何在站内快速找到想看的类型？</div>
+          <div class="faq-answer">首屏搜索框支持按片名、类型或演员关键词检索；分类入口提供八个常用类型快捷按钮；热门推荐和最新更新列表也都可以快速扫读。移动端同样保留了分类和搜索入口，操作路径和桌面端一致。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section class="section" id="comments">
+      <div class="section-header">
+        <h2 class="section-title">用户评论 · 真实声音</h2>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-avatar">陈</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">陈默的观影日记</span><span class="comment-time">2026-11-06</span></div>
+            <p class="comment-text">《暗夜追凶》第8集那个反转确实没想到，前面埋的细节全串起来了。不过说实话前两集差点弃了，节奏稍微有点散，坚持过第三集就好看了。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">林</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">林小满</span><span class="comment-time">2026-11-05</span></div>
+            <p class="comment-text">夏日来信看完了，最后一集哭得不行。虽然剧情不算新鲜，但演员演得很自然，小镇的取景也舒服。适合周末窝在沙发里慢慢看。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">张</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">张不开嘴</span><span class="comment-time">2026-11-05</span></div>
+            <p class="comment-text">星际回响的特效在国产剧里算很能打了，配乐也加分。但是感情线写得有点生硬，男主和女二那段回忆插得不是时候，每次都在紧张的时候跳出来。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">王</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">王铁柱</span><span class="comment-time">2026-11-04</span></div>
+            <p class="comment-text">黑潮的动作戏是真的干净，没有慢镜头硬拖，这点好评。不过后面几集编剧是不是换人了？台词风格和前六集不太一样。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">赵</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">赵小北</span><span class="comment-time">2026-11-04</span></div>
+            <p class="comment-text">在金牌影院官方网站上按分类找片挺方便的，分类标签做得清楚。希望以后能加一个“按时长筛选”的功能，有时候只想看个短一点的。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">刘</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">刘一菲的影迷</span><span class="comment-time">2026-11-03</span></div>
+            <p class="comment-text">时间旅馆的设定让我想起以前看过的一部老片，但这部拍出了自己的味道。节奏慢但是不闷，适合下雨天看。就是更新太慢了，一周才两集。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">周</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">周不疑</span><span class="comment-time">2026-11-03</span></div>
+            <p class="comment-text">极限代码的题材我很感兴趣，但看下来觉得反派塑造有点单薄，AI的动机不够清晰。不过作为悬疑片还是可以追下去的，希望后面能圆回来。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">吴</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">吴大熊</span><span class="comment-time">2026-11-02</span></div>
+            <p class="comment-text">深夜食堂重启版比预想的好，没有硬卖情怀，新加的几个角色也立得住。就是每集太短了，吃饭的时候看正好，吃完还想再看一集。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">郑</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">郑在读书</span><span class="comment-time">2026-11-02</span></div>
+            <p class="comment-text">这个站点的资讯更新挺快的，前几天刚看到《雾港》的定档消息，第二天就在最新更新里看到了。比我自己搜方便。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">孙</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">孙小美</span><span class="comment-time">2026-11-01</span></div>
+            <p class="comment-text">能不能多推荐一些喜剧啊？最近压力大，只想看不用动脑子的。动作和悬疑是好，但有时候真的需要轻松一点的。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">李</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">李寻欢的刀</span><span class="comment-time">2026-10-31</span></div>
+            <p class="comment-text">黑潮的结尾收得有点仓促，感觉是为了第二季留悬念，但有些线没交代清楚。整体还是好看的，就是最后两集有点赶。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">钱</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">钱多多</span><span class="comment-time">2026-10-30</span></div>
+            <p class="comment-text">差点因为海报错过夏日来信，海报做得一般，但内容真的不错。建议小编换张更好看的封面图。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">韩</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">韩梅梅</span><span class="comment-time">2026-10-29</span></div>
+            <p class="comment-text">在手机上浏览排版挺舒服的，卡片大小刚好，不用放大缩小。评论区的字体如果再大一点就好了。</p>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">冯</div>
+          <div class="comment-body">
+            <div class="comment-user"><span class="comment-name">冯宝宝不宝</span><span class="comment-time">2026-10-28</span></div>
+            <p class="comment-text">荒原信条有人看了吗？西部题材这几年很少见，看简介有点意思，想等养肥了再看，先蹲个评论。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-header">
+        <h2 class="section-title">影视资讯 · 动态速递</h2>
+        <a href="/#news" class="section-more">更多资讯 →</a>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-date">2026-11-06</div>
+          <h3 class="news-title">暗夜追凶导演透露第二季已在筹备中</h3>
+          <p class="news-summary">据主创团队透露，第一季结尾留下的悬念将在第二季中得到完整解答，目前剧本已进入打磨阶段，预计明年下半年与观众见面。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-05</div>
+          <h3 class="news-title">星际回响发布幕后制作特辑，揭秘太空场景拍摄过程</h3>
+          <p class="news-summary">制作团队采用实景搭建与虚拟拍摄结合的方式，在有限预算下完成了多场太空戏份，特辑中展示了部分未曝光的概念设计图。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-04</div>
+          <h3 class="news-title">夏日来信完结口碑持续走高，治愈系题材回温</h3>
+          <p class="news-summary">该剧在上线期间保持了稳定的讨论热度，完结后评分不降反升。业内人士认为，轻体量的治愈系作品在当下市场仍有稳定的受众基础。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-03</div>
+          <h3 class="news-title">黑潮动作指导分享幕后训练花絮</h3>
+          <p class="news-summary">主演在开拍前进行了为期两个月的体能和格斗训练，动作指导表示希望呈现更接近真实质感的打斗场面，减少过度依赖威亚。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-02</div>
+          <h3 class="news-title">时间旅馆单元剧形式获好评，观众呼吁延长集数</h3>
+          <p class="news-summary">每集讲述一个独立访客故事的叙事结构受到观众认可，不少人在评论区留言希望增加集数。制作方表示正在评估后续开发的可能性。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-01</div>
+          <h3 class="news-title">金牌影院官方网站新增“经典老片”分类入口</h3>
+          <p class="news-summary">为满足用户对经典影片的回顾需求，站点在分类模块中新增了经典老片入口，首批收录了数十部高口碑作品，后续将持续补充。</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:#fff;margin-bottom:12px;">
+            <span class="logo-icon" style="width:32px;height:32px;font-size:1rem;">金</span>
+            金牌影院
+          </div>
+          <p>金牌影院官方网站 · 为影视爱好者提供清晰、实用的观影参考。所有推荐内容均基于公开信息整理，不提供在线播放服务。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容导航</h4>
+          <a href="/#hero">首页</a>
+          <a href="/#hot-picks">热门推荐</a>
+          <a href="/#latest-updates">最新更新</a>
+          <a href="/#categories">类型分类</a>
+        </div>
+        <div class="footer-col">
+          <h4>帮助中心</h4>
+          <a href="/#faq">常见问题</a>
+          <a href="/#analysis">深度解析</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#news">影视资讯</a>
+        </div>
+        <div class="footer-col">
+          <h4>友情链接</h4>
+          <a href="/#hero">影视评论站</a>
+          <a href="/#hero">剧集追踪</a>
+          <a href="/#hero">观影指南</a>
+          <a href="/#hero">片单分享</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 金牌影院官方网站 · 本站内容仅供参考，不存储任何影视资源。</span>
+        <span>免责声明：页面信息基于公开资料整理，如有异议请联系处理。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ 手风琴交互
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = this.parentNode;
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+                                                                                                                                                                                   </html>
